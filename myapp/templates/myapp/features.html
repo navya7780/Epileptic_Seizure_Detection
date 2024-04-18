@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	{% block style %}
+   
+	{% endblock %}
+  
+  <link rel="stylesheet" type="text/css" href="{% static   'css/style11.css' %}">
+ <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+        
+    </script>
+</head>
+<body >
+	{% include 'myapp/messages.html' %}
+
+    <div class="menubar" id="nav1">
+    
+   <a href="{% url 'start' %}">go back</a>
+<p>EPILEPTIC SEIZURE DETECTION SYSTEM</p>
+        
+
+</div>
+	
+	<br>
+	<center>
+  
+
+  
+   <br>
+
+  <h2>  FEATURES EXTRACTED SUCCESSFULLY</h2>
+
+<br>
+<h3>The file is divided into {{ sections }} sections<h3>
+<br>
+<h3>Time Window taken is 5 sec</h3>
+
+  
+	</center>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>   
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{% static   'css/style11.css' %}">
+
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+        
+    </script>
+</head>
+    <body>
+        {% include 'myapp/messages.html' %}
+        <div class="menubar" id="nav1">
+    
+   <a href="{% url 'start' %}">go back</a>
+<p>EPILEPTIC SEIZURE DETECTION SYSTEM</p>
+        
+
+</div>
+    	<br>
+     <center>
+      <h2>PRE-PROCESSED FILE</h2>
+      <p>{{ data1 }}</p>
+      
+      <image src="data:image/png;base64,{{ chart}}"></image>
+     </center>
+     </body>
+     </html>

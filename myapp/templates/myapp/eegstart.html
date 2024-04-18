@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!----bootrap link-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	{% block style %}
+     <!---font awesome icons--->
+	{% endblock %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static   'css/style11.css' %}">
+ <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+    </script>
+</head>
+<body >
+
+	{% include 'myapp/messages.html' %}
+
+<div class="menubar" id="nav1">
+    
+   <a href="{% url 'login' %}">HOME</a>
+<p>EPILEPTIC SEIZURE DETECTION SYSTEM</p>
+        
+
+</div>
+	    
+	
+	<br>
+	<center>
+		<br><br>
+	<a href="{% url 'choose' %}" ><button class="btn btn-light btn-lg" style="width:500px">DISPLAY  EEG SIGNAL</button></a>
+	<br><br>
+	
+	<a href="{% url 'fivebands' %}"> <button class="btn btn-light btn-lg" style="width:500px">SELECT VARIOUS FREQ BANDS</button></a><br><br>
+
+	<a href="{% url 'preprocess' %}"> <button class="btn btn-light btn-lg" style="width:500px">PREPROCESS SIGNAL</button></a><br><br>
+
+	
+	
+	<a href="{% url 'features' %}" ><button class="btn btn-dark btn-lg" style="width:500px" >EXTRACT FEATURES </button></a><br><br>
+	
+	<a href="{% url 'navbar' %}" ><button class="btn btn-dark btn-lg" style="width:500px" >CLASSIFY</button></a><br><br>
+	
+	<a href="{% url 'result' %}"><button class="btn btn-dark btn-lg" style="width:500px">VIEW PERFORMANCE</button></a><br><br>
+
+	<a href="{% url 'delete' %}" ><button class="btn btn-dark btn-lg" style="width:500px" >CLEAR FILES </button></a><br><br>
+
+	</center>
+	<section>
+
+		{% block content %}
+		{% endblock content %}
+	</section>
+</body>
+</html>
